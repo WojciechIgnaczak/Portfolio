@@ -1,7 +1,13 @@
 # WeatherApp Project
 To jest projekt aplikacji umożliwiający wysyłanie informacji pogodowych odpowiednich miast na adresy mailowe użytkowników zamieszczonych w bazie danych sqlite3. Aplikacja oparta jest na API: *weather.visualcrossing.com*
 ## Instrukcja
-Aby skorzystać z aplikacji należy w pliku config umieścić swój klucz API, adres mail oraz hasło z którego chcemy wysyłać maile. Następnie w pliku *database.py* dodać maile użytkowników i ich miasta za pomocą metody *insert_new_user*, a następnie za pomocą metody *send_mails* wysłać maile
+#### Aby skorzystać z aplikacji należy:
+pobrać z pliku *requirements.txt* potrzebne biblioteki 
+
+w pliku config umieścić swój klucz API, adres mail oraz hasło z którego chcemy wysyłać maile
+
+w pliku *database.py* dodać maile użytkowników i ich miasta za pomocą metody *insert_new_user*, a następnie za pomocą metody *send_mails* wysłać maile
+
 # Config.py
 ## Plik zawierający dane potrzebne do konfiguracji programu:
 **apikey:** zawiera klucz do API
