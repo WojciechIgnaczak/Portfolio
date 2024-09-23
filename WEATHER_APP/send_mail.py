@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
-from weather_app_1 import WeatherApp
+from weather import WeatherApp
 from config import password
 import datetime
 import time
