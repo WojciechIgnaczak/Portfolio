@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
 from weather import WeatherApp
-from config import password
+from config import password, sender_mail_config
 import datetime
 import time
 
@@ -18,7 +18,7 @@ class Mail:
         weather=WeatherApp(city)
 
         # Dane nadawcy i odbiorcy
-        sender_email = "wojciech.ignaczak@onet.pl"
+        sender_email = sender_mail_config
         subject = f"Pogoda dla {weather.city.lower().capitalize()}, {datetime.date.today()}"
         body = f"{weather.return_string_data()}"
 
