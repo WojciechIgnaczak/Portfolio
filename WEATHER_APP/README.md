@@ -7,7 +7,32 @@ pobrać z pliku *requirements.txt* potrzebne biblioteki
 w pliku config umieścić swój klucz API, adres mail oraz hasło z którego chcemy wysyłać maile
 
 w pliku *database.py* dodać maile użytkowników i ich miasta za pomocą metody *insert_new_user*, a następnie za pomocą metody *send_mails* wysłać maile
+#### Przykładowe użycie do wysłania maila jednorazowo
+###### W pliku *database.py*
+```
+base=DataBase() #użycie klasy i automatyczne stworzenie bazy danych i tabeli
+base.insert_new_user('example1@gmail.com','Warszawa') #dodanie użytkownika o adresie mailowym example1@gmail.com i pogodzie dla miasta Warszawa
+base.insert_new_user('example2@gmail.com','Kraków')
+base.insert_new_user('example3@gmail.com','Katowice')
+base.update_city('example2@gmail.com','Gdańsk') #zmiana miasta dla użytkowanika example2@gmail.com
+base.delete_user('example3@gmail.com') #usunięcie użytkownika z bazy danych
+base.send_mails() #wysłanie maili o pogodzie dla odpowiednich miast do wszystkich adresów w bazie danych 
+```
 
+#### Przykładowe użycie do wysłania maila co 24h
+###### W pliku *database.py*
+```
+import time
+base=DataBase() #użycie klasy i automatyczne stworzenie bazy danych i tabeli
+base.insert_new_user('example1@gmail.com','Warszawa') #dodanie użytkownika o adresie mailowym example1@gmail.com i pogodzie dla miasta Warszawa
+base.insert_new_user('example2@gmail.com','Kraków')
+base.insert_new_user('example3@gmail.com','Katowice')
+base.update_city('example2@gmail.com','Gdańsk') #zmiana miasta dla użytkowanika example2@gmail.com
+base.delete_user('example3@gmail.com') #usunięcie użytkownika z bazy danych
+while True:
+    base.send_mails() #wysłanie maili o pogodzie dla odpowiednich miast do wszystkich adresów w bazie danych
+    time.sleep(86400) #wstrzymanie na 24 godziny (86400 sekund)
+```
 # Config.py
 ## Plik zawierający dane potrzebne do konfiguracji programu:
 **apikey:** zawiera klucz do API
