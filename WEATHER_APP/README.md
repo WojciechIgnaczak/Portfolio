@@ -1,5 +1,5 @@
 # WeatherApp Project
-To jest projekt aplikacji umożliwiający wysyłanie informacji pogodowych odpowiednich miast na adresy mailowe użytkowników zamieszczonych w bazie danych sqlite3. Aplikacja oparta jest na API: *weather.visualcrossing.com*
+To jest projekt aplikacji umożliwiający wysyłanie informacji pogodowych odpowiednich miast na adresy mailowe użytkowników zamieszczonych w bazie danych sqlite3. Aplikacja oparta jest na API: *weather.visualcrossing.com*. Na ten moment wysyłanie maili możliwe tylko z poczty *onet.pl*
 ## Instrukcja
 #### Aby skorzystać z aplikacji należy:
 pobrać z pliku *requirements.txt* potrzebne biblioteki 
