@@ -137,10 +137,3 @@ class WeatherApp:
             plt.close()
         except Exception as e: print(f"Error: {e}")
 
-
-# Użycie klasy
-
-# # city=input("Podaj miasto: ").lower()
-# city='New York'
-# weather_app = WeatherApp(city)
-# print(weather_app.display_all_data())

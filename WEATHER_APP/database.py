@@ -87,12 +87,3 @@ class DataBase:
             print("Baza danych została usunięta.")
         else:
             print("Baza danych nie istnieje.")
-# Tworzenie obiektu bazy danych
-base = DataBase()
-#base.insert_new_user('pogoda3@onet.pl','warszawa')
-# Przykładowe użycie metod
-# base.insert_new_user('pogoda04@onet.pl','Rzeszów')
-# base.insert_new_user('wojciech.ignaczak@onet.pl','Płock')
-# base.send_mails()
-# base.display_all()
-base.delete_data_base()
